@@ -715,7 +715,7 @@ Kydqq0onBIM+VDqKKQIDAQAB
 
     const payUrl = `${baseUrl}/api/v1/create/order/payment`;
 
-    const returnUrl= "https://api-sandbox.beyounger.com/v1/wait/?id="+document.getElementById("id").value;
+    const returnUrl= `${baseUrl}/v1/wait/?id=`+document.getElementById("id").value;
 
     var customer = {
         email: document.getElementById("email").value,
@@ -763,7 +763,7 @@ Kydqq0onBIM+VDqKKQIDAQAB
         cart_items: cart_items,
         delivery_recipient: delivery_recipient,
         return_url: returnUrl,
-        notification_url: "",
+        notification_url: baseUrl,
     }
 
     var apiKey = "your apiKey"
